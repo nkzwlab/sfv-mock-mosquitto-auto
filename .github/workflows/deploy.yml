@@ -20,13 +20,15 @@ jobs:
 
       - name: known_hosts にホスト追加
         run: |
-          ssh-keyscan -H xr-mock.jn.sfc.keio.ac.jp >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
 
       - name: サーバーにデプロイ
         run: |
-          ssh deploy@xr-mock.jn.sfc.keio.ac.jp << 'EOF'
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            set -e
             cd /home/deploy/sfv-mock-mosquitto-auto
             git pull origin main
             docker-compose pull
+            docker-compose down -v
             docker-compose up -d --build
           EOF

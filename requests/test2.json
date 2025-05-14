@@ -1,0 +1,8 @@
+{
+  "topic": "test2",
+  "message": [
+    "test desuyo"
+  ],
+  "type": "sequential",
+  "send_interval": 1000
+}

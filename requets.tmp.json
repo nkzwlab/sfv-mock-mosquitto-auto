@@ -1,0 +1,8 @@
+{
+  "topic": "トピック名",
+  "message": [
+    "送る内容"
+  ],
+  "type": "randomかsequentialを指定",
+  "send_interval": 1000
+}

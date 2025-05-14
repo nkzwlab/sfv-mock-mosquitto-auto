@@ -1,0 +1,9 @@
+{
+  "topic": "test",
+  "message": [
+    "Foo",
+    "Bar"
+  ],
+  "type": "random",
+  "send_interval": 1000
+}

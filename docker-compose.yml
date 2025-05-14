@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+
+  mosquitto:
+    build:
+      context: .
+      dockerfile: mosquitto/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+    env_file:
+      - .env
+    volumes:
+      - "${CONFIG_DIR}:/mosquitto/config:"
+
+  publisher:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      - mosquitto
+    env_file:
+      - .env
+    environment:
+      MQTT_HOST: "${MQTT_HOST}"
+      MQTT_PORT: "${MQTT_PORT}"
+      PUBLISHER_USER: "${PUBLISHER_USER}"
+      PUBLISHER_PASSWORD: "${PUBLISHER_PASSWORD}"

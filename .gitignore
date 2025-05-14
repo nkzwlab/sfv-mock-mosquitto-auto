@@ -1,1 +1,47 @@
+# Byte-compiled / optimized / DLL files
+
+**pycache**/
+\*.py\[cod]
+\*\$py.class
+
+# Virtual environments
+
+venv/
+env/
+.venv/
+
+# Environment variables file
+
 .env
+
+# Logs
+
+\*.log
+
+# Pytest cache
+
+.pytest\_cache/
+
+# IDE / editor directories
+
+.vscode/
+.idea/
+\*.swp
+
+# macOS files
+
+.DS\_Store
+
+# Docker Compose override
+
+docker-compose.override.yml
+
+# Mosquitto password file
+
+/config/passwordfile
+
+# Build outputs
+
+build/
+dist/
+\*.egg-info/

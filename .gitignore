@@ -38,7 +38,7 @@ docker-compose.override.yml
 
 # Mosquitto password file
 
-/config/passwordfile
+config/passwordfile
 
 # Build outputs
 

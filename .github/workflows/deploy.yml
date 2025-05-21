@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  # 全ジョブ共通で Webhook を利用
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -32,3 +36,23 @@ jobs:
             docker-compose down -v
             docker-compose up -d --build
           EOF
+
+      # デプロイ成功時の Slack 通知
+      - name: Slack Notification on Success
+        if: success()
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
+          SLACK_CHANNEL: ci
+          SLACK_TITLE: Deploy Success
+          SLACK_COLOR: good
+
+      # デプロイ失敗時の Slack 通知
+      - name: Slack Notification on Failure
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
+          SLACK_CHANNEL: ci
+          SLACK_TITLE: Deploy Failure
+          SLACK_COLOR: danger

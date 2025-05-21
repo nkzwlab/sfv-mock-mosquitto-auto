@@ -7,7 +7,7 @@ on:
 
 env:
   # 全ジョブ共通で Webhook を利用
-  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
 jobs:
   deploy:

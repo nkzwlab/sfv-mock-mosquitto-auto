@@ -56,3 +56,61 @@ jobs:
           SLACK_CHANNEL: ci
           SLACK_TITLE: Deploy Failure
           SLACK_COLOR: danger
+name: Deploy to MQTT Mock Server
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  # 全ジョブ共通で Webhook を利用
+  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: SSH Agent のセットアップ
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: known_hosts にホスト追加
+        run: |
+          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: サーバーにデプロイ
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'EOF'
+            set -e
+            cd /home/deploy/sfv-mock-mosquitto-auto
+            git pull origin main
+            docker-compose pull
+            docker-compose down -v
+            docker-compose up -d --build
+          EOF
+
+      # デプロイ成功時の Slack 通知
+      - name: Slack Notification on Success
+        if: success()
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
+          SLACK_CHANNEL: ci
+          SLACK_TITLE: Deploy Success
+          SLACK_COLOR: good
+
+      # デプロイ失敗時の Slack 通知
+      - name: Slack Notification on Failure
+        if: failure()
+        uses: rtCamp/action-slack-notify@v2.0.2
+        env:
+          SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
+          SLACK_CHANNEL: ci
+          SLACK_TITLE: Deploy Failure
+          SLACK_COLOR: danger

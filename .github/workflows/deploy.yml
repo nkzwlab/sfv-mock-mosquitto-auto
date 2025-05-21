@@ -54,5 +54,5 @@ jobs:
           SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
           SLACK_TITLE: Deploy Failure
           SLACK_LINK_NAMES: 'true'
-          SLACK_MESSAGE: '@dang0 デプロイ失敗'
+          SLACK_MESSAGE: '@channel デプロイ失敗'
           SLACK_COLOR: danger

@@ -43,7 +43,6 @@ jobs:
         uses: rtCamp/action-slack-notify@v2.0.2
         env:
           SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
-          SLACK_CHANNEL: ci
           SLACK_TITLE: Deploy Success
           SLACK_COLOR: good
 
@@ -53,6 +52,5 @@ jobs:
         uses: rtCamp/action-slack-notify@v2.0.2
         env:
           SLACK_WEBHOOK: ${{ env.SLACK_WEBHOOK }}
-          SLACK_CHANNEL: ci
           SLACK_TITLE: Deploy Failure
           SLACK_COLOR: danger

@@ -6,5 +6,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY publisher.py .
 COPY requests/ requests/
+COPY reffile/ reffile/
 
 CMD ["python", "publisher.py"]

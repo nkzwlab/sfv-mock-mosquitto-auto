@@ -1,7 +1,7 @@
 {
     "topic": "simulated_yaverse/05/simulation",
     "message": [
-        "file:reffiles/sim_branched/05/20241013.json"
+        "file:sim_branched/05/20241013.json"
     ],
     "type": "sequential",
     "send_interval": 1000

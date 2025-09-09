@@ -45,3 +45,5 @@ config/passwordfile
 build/
 dist/
 \*.egg-info/
+
+localdata/

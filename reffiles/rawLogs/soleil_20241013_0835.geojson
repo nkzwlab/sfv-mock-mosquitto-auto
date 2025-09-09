@@ -1,0 +1,69 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 3,
+                "name": "08",
+                "host": "f577ef68",
+                "timestamp": "20241013_0835"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611512,
+                    35.194103
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 6,
+                "name": "05",
+                "host": "b9390400",
+                "timestamp": "20241013_0835"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.609189,
+                    35.191747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 2,
+                "name": "03",
+                "host": "0c4b8f61",
+                "timestamp": "20241013_0835"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.610348,
+                    35.193929
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 15,
+                "name": "01",
+                "host": "3db25e9c",
+                "timestamp": "20241013_0835"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611967,
+                    35.196164
+                ]
+            }
+        }
+    ]
+}

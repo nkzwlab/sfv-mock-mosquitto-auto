@@ -1,0 +1,53 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 1,
+                "name": "08",
+                "host": "f577ef68",
+                "timestamp": "20241013_0800"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611512,
+                    35.194103
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 4,
+                "name": "03",
+                "host": "0c4b8f61",
+                "timestamp": "20241013_0800"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.610348,
+                    35.193929
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 4,
+                "name": "01",
+                "host": "3db25e9c",
+                "timestamp": "20241013_0800"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611967,
+                    35.196164
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 2,
+                "name": "03",
+                "host": "0c4b8f61",
+                "timestamp": "20241013_0810"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.610348,
+                    35.193929
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 10,
+                "name": "01",
+                "host": "3db25e9c",
+                "timestamp": "20241013_0810"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611967,
+                    35.196164
+                ]
+            }
+        }
+    ]
+}

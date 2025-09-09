@@ -1,0 +1,8 @@
+{
+    "topic": "simulated_yaverse/03/simulation",
+    "message": [
+        "file:reffiles/sim_branched/03/20241013.json"
+    ],
+    "type": "sequential",
+    "send_interval": 1000
+}

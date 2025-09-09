@@ -1,0 +1,172 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 49,
+                "name": "08",
+                "host": "f577ef68",
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611512,
+                    35.194103
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 11,
+                "name": "05",
+                "host": "b9390400",
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.609189,
+                    35.191747
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 8,
+                "name": "03",
+                "host": "0c4b8f61",
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.610348,
+                    35.193929
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 14,
+                "name": "06",
+                "host": "09032fde",
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611612,
+                    35.192392
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": 183,
+                "name": "01",
+                "host": "3db25e9c",
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    139.611967,
+                    35.196164
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": -1,
+                "count": 1,
+                "o": {
+                    "host": "b9390400",
+                    "name": "05"
+                },
+                "d": {
+                    "host": "3db25e9c",
+                    "name": "01"
+                },
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        139.609189,
+                        35.191747
+                    ],
+                    [
+                        139.611967,
+                        35.196164
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": -1,
+                "count": 2,
+                "o": {
+                    "host": "09032fde",
+                    "name": "06"
+                },
+                "d": {
+                    "host": "b9390400",
+                    "name": "05"
+                },
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        139.611612,
+                        35.192392
+                    ],
+                    [
+                        139.609189,
+                        35.191747
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "intensity": -1,
+                "count": 5,
+                "o": {
+                    "host": "3db25e9c",
+                    "name": "01"
+                },
+                "d": {
+                    "host": "f577ef68",
+                    "name": "08"
+                },
+                "timestamp": "20241013_0920"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        139.611967,
+                        35.196164
+                    ],
+                    [
+                        139.611512,
+                        35.194103
+                    ]
+                ]
+            }
+        }
+    ]
+}
